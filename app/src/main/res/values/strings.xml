@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Spotify</string>
+    <string name="shuffle">Shuffle Play</string>
+    <string name="title">Top Hits Philippines</string>
+    <string name="more">More</string>
+    <string name="song_title">Mercy</string>
+    <string name="artist">Shawn Mendes</string>
+    <string name="title_home">HOME</string>
+    <string name="title_browser">BROWSER</string>
+    <string name="title_serach">SEARCH</string>
+    <string name="title_radio">RADIO</string>
+    <string name="title_library">LIBRARY</string>
+</resources>

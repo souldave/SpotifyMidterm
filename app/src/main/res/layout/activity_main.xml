@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:background="#444444"
+    android:layout_height="match_parent"
+    tools:context="com.example.davegilbier.spotify.Controller.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_backdrop_height"
+        android:theme="@style/CustomCollapse"
+        android:fitsSystemWindows="true">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/id1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:collapsedTitleGravity="center"
+            android:scrollbarFadeDuration="2"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/toolbarColor"
+
+            android:fitsSystemWindows="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="top"
+            app:layout_collapseMode="pin"
+            android:background="#444444"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/CustomCollapse">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:paddingTop="10dp"
+                android:text="@string/title"
+                android:textSize="20sp"
+                android:layout_marginLeft="40dp"
+                android:textColor="#FFF"/>
+        </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="top"
+        app:layout_collapseMode="pin"
+        android:background="#444444"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/CustomCollapse">
+            <Button
+                android:id="@+id/btnShuffle"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:background="@drawable/buttonsq"
+                android:layout_marginLeft="90dp"
+                android:text="@string/shuffle"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_anchor="@id/nestedScrollView"
+                app:layout_anchorGravity="center|top"
+                tools:layout_editor_absoluteY="457dp" />
+    </android.support.v7.widget.Toolbar>
+
+            </LinearLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_marginTop="30dp"
+        android:background="@color/toolbarColor"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scrollbars="vertical"
+                android:background="@color/backgroundList"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
+    <FrameLayout
+        android:id="@+id/fragment_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fragment"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp">
+    </FrameLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:menu="@menu/navigation"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
+        android:background="#444444"/>
+    />
+
+</RelativeLayout>
